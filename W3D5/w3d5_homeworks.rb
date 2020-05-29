@@ -55,11 +55,13 @@ class Map
     end
 
     def get(key)
-
+        key_index = get_key_idx(key)
+        @my_map[key_index][1]
     end
 
     def delete(key)
-        
+        key_index = get_key_idx(key)
+        @my_map.delete_at(key_index)
     end
 
 end
