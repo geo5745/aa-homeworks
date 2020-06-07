@@ -29,7 +29,7 @@ def bfs(starting_node, target_value)
     queue = [starting_node]
     visited = []
     until queue.empty?
-        p queue
+        #p queue
         visited << queue.first
         return queue.first if queue.first.val == target_value
         queue.first.neighbors.each do |neighbor|
@@ -37,8 +37,10 @@ def bfs(starting_node, target_value)
                 queue << neighbor
             end
         end
+        p queue.first
         queue.shift
     end
 end
 
-p bfs(f,d)
+p "--------"
+p bfs(a,"d")
